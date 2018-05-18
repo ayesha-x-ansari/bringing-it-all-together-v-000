@@ -21,7 +21,7 @@ class Dog
         DB[:conn].execute(sql, self.name, self.breed)
 
         @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
-        self.class.new_from_db
+        self
     end
   end
 
@@ -29,7 +29,7 @@ class Dog
     id = row[0]
     name =  row[1]
     breed = row[2]
-    new_dog =   Dog.new(id, name, breed)                   # return the newly created instance
+    self.new(id, name, breed)                   # return the newly created instance
   end
 
   def self.create(name, breed)
