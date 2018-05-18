@@ -100,4 +100,10 @@ class Dog
     sql = "DROP TABLE IF EXISTS dogs"
     DB[:conn].execute(sql)
   end
+
+  def update
+    sql = "UPDATE dogs SET name = ?, breed = ?  WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
+
 end
