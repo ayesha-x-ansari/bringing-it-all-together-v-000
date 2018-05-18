@@ -32,7 +32,7 @@ class Dog
     self.new(id, name, breed)                   # return the newly created instance
   end
 
-  def self.create(name, breed)
+  def self.create(name:, breed:)
     dog = Student.new(name, breed)
     dog.save
   end
