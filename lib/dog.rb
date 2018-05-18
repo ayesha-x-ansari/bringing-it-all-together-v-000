@@ -42,7 +42,7 @@ class Dog
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 
-  def self.find_by_name(id)
+  def self.find_by_id(id)
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = <<-SQL
