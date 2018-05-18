@@ -29,7 +29,7 @@ class Dog
     id = row[0]
     name =  row[1]
     breed = row[2]
-    new_dog =   Dog.new(id, name, grade)                   # return the newly created instance
+    new_dog =   Dog.new(id, name, breed)                   # return the newly created instance
   end
 
   def self.create(name, breed)
